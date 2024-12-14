@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Methods of Molecular Quantum Mechanics &#8212; Home</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Home - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Home - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Methods of Molecular Quantum Mechanics
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Methods of Molecular Quantum Mechanics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-helium-atom">Example: Helium Atom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-approximation">First approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry-of-wavefunction">Symmetry of wavefunction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-single-electron-spin">Effect of single electron spin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-electron-states">Classification of electron states</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hydrogen-molecule">Example: Hydrogen Molecule</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-molecule-ion-mathrm-h-2">Hydrogen molecule ion <span class="math notranslate nohighlight">\(\mathrm{H_{2}^{+}}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-molecule-mathrm-h-2">Normal molecule <span class="math notranslate nohighlight">\(\mathrm{H_{2}}\)</span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="methods-of-molecular-quantum-mechanics">
+<h1>Methods of Molecular Quantum Mechanics<a class="headerlink" href="#methods-of-molecular-quantum-mechanics" title="Link to this heading">#</a></h1>
+<p>Molecular stationary states are determined by time-independent Schrödinger equation (SE).
+$<span class="math notranslate nohighlight">\(H \Psi(\boldsymbol{x_{1}},\boldsymbol{x_{2}},\cdots, \boldsymbol{x_{N}}) = E \Psi(\boldsymbol{x_{1}},\boldsymbol{x_{2}},\cdots,\boldsymbol{x_{N}})\)</span><span class="math notranslate nohighlight">\(
+where bold letter \)</span>\boldsymbol{x_{i}}<span class="math notranslate nohighlight">\( collectively symbolizes particle \)</span>i<span class="math notranslate nohighlight">\('s coordinates \)</span>(x_{i},y_{i},z_{i})<span class="math notranslate nohighlight">\( and spin variable \)</span>\alpha<span class="math notranslate nohighlight">\( or \)</span>\beta<span class="math notranslate nohighlight">\(. 
+When \)</span>\Psi<span class="math notranslate nohighlight">\( is normalized, \)</span>|\Psi|^{2}<span class="math notranslate nohighlight">\( has the physical interpretation that \)</span>|\Psi|^{2}\mathrm{d}\boldsymbol{x_{1}}\mathrm{d}\boldsymbol{x_{2}}\cdots \mathrm{d}\boldsymbol{x_{N}}<span class="math notranslate nohighlight">\( equals the probability of finding electrons \)</span>1,2,\cdots,N<span class="math notranslate nohighlight">\( simultaneously in volume elements \)</span>\mathrm{d}\boldsymbol{x_{1}}\times\mathrm{d}\boldsymbol{x_{2}}\times\cdots\times\mathrm{d}\boldsymbol{x_{N}}<span class="math notranslate nohighlight">\(. [[Probability Construction of Quantum Mechanics]]
+Any experimental observation is performed on a **macroscopic aggregate of molecules**, not a single molecule, and the interaction between molecules and environment will also disturb the observation. Therefore, we may not be able to describe **real chemical reactions** which include collision and scattering processes, and gas, liquid or solid phase; even in molecular level, such processes are time-dependent (TD) and require TD SE:
+\)</span><span class="math notranslate nohighlight">\(H \Psi = \mathrm{i}\hbar \frac{ \partial \Psi }{ \partial t }\)</span>$
+However, <strong>the radiation field</strong>, including transitions from one state to another, and properties of <strong>individual molecular states</strong> can be accurately obtained from observation.</p>
+<section id="example-helium-atom">
+<h2>Example: Helium Atom<a class="headerlink" href="#example-helium-atom" title="Link to this heading">#</a></h2>
+<p>Consider Helium-like atom,
+$<span class="math notranslate nohighlight">\(H(1,2) = h(1)+h(2)+g(1,2)\)</span><span class="math notranslate nohighlight">\(
+where 
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+h(i) &amp;= - \frac{1}{2}\nabla^{2}(i) - \frac{Z}{r_{i}}\\
+g(1,2) &amp;= \frac{1}{r_{12}}
+\end{aligned}\)</span>$</p>
+<section id="first-approximation">
+<h3>First approximation<a class="headerlink" href="#first-approximation" title="Link to this heading">#</a></h3>
+<p>^533af6</p>
+<p>Model non-interacting system
+$<span class="math notranslate nohighlight">\(H_{0}(1,2) = h(1)+h(2)\)</span><span class="math notranslate nohighlight">\(
+By variable separation we reduce the problem to one-electron eigenvalue problem.
+\)</span><span class="math notranslate nohighlight">\(h \phi_{i} = \epsilon \phi_{i}, i\in \{1,2\} \)</span><span class="math notranslate nohighlight">\(
+[[Atomic Orbitals]]
+And total energy \)</span>E = \epsilon_{1}+\epsilon_{2}<span class="math notranslate nohighlight">\(, where \)</span>\epsilon_{i}<span class="math notranslate nohighlight">\( are called orbital energies. 
+Then construct the simultaneous eigenstate \)</span>\Phi(r_{1},r_{2}) = \phi_{1}(r_{1})\phi_{2}(r_{2})<span class="math notranslate nohighlight">\(, which satisfies both 
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+h(1)\Phi(r_{1},r_{2}) &amp;= \epsilon_{1}\Phi(r_{1},r_{2})\\
+h(2)\Phi(r_{1},r_{2}) &amp;= \epsilon_{2}\Phi(r_{1},r_{2})
+\end{aligned} \)</span><span class="math notranslate nohighlight">\(
+Therefore,
+\)</span><span class="math notranslate nohighlight">\(H_{0}\Phi(r_{1},r_{2}) = (\epsilon_{1}+\epsilon_{2})\Phi(r_{1},r_{2}) \)</span><span class="math notranslate nohighlight">\(
+This approach can be generalized for any number of electrons with neglecting interaction term \)</span>g<span class="math notranslate nohighlight">\(. Therefore, in non-interacting case, we only need to solve for one-electron problem, and taking a product of one-electron eigenfunctions, we get the final solution \)</span>\Phi(r_{1},r_{2},\cdots,r_{N})<span class="math notranslate nohighlight">\(. Noted that even we introduce interaction term \)</span>g<span class="math notranslate nohighlight">\(, the product function form can still be used to describe and classify the **possible electronic states** of the many-electron system.
+And the independent-particle model (IPM) can be refined to Hartree-Fock method by introducing interaction in an average potential way. 
+A product function 
+\)</span><span class="math notranslate nohighlight">\(\Phi(r_{1},r_{2},\cdots,r_{N}) = \phi_{1}(r_{1})\phi_{2}(r_{2})\cdots \phi_{N}(r_{N})\)</span><span class="math notranslate nohighlight">\(
+provides a specification of orbitals \)</span>\phi_{1},\phi_{2},\cdots,\phi_{N}<span class="math notranslate nohighlight">\( to \)</span>N<span class="math notranslate nohighlight">\( electrons. The solutions of SE[[Atomic Orbitals#^6702b9]] form an infinite set \)</span>\phi_{1},\phi_{2},\cdots<span class="math notranslate nohighlight">\(, and the orbitals appearing in product functions \)</span>\Phi(r_{1},r_{2},\cdots,r_{N})<span class="math notranslate nohighlight">\( are said to be occupied, all others being unoccupied. 
+In the Helium example, with no interaction, the occupied AOs may both be 1s, or may be 1s the other 2s, or may even include 2p, 3s... orbitals. Here we only consider the first two cases, where the corresponding wavefunctions and energies being 
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\Phi_{1}(r_{1},r_{2}) &amp;= \text{1s}(r_{1})\text{1s}(r_{2}), E_{1} = 2\epsilon_{\text{1s}}\\
+\Phi_{2}(r_{1},r_{2}) &amp;= \text{1s}(r_{1})\text{2s}(r_{2}),E_{2} =\epsilon_{\text{1s}}+\epsilon_{\text{2s}}
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+The specification of occupied orbitals defines an **orbital configuration**, which frequently abbreviated by symbols such as \)</span>\text{1s}^{2},\text{1s 2s}$, etc.</p>
+</section>
+<section id="symmetry-of-wavefunction">
+<h3>Symmetry of wavefunction<a class="headerlink" href="#symmetry-of-wavefunction" title="Link to this heading">#</a></h3>
+<p>Because electrons are indistinguishable, the wavefunction’s form has a restriction. Suppose the exact wavefunction <span class="math notranslate nohighlight">\(\Psi(r_{1},r_{2})\)</span> equals to <span class="math notranslate nohighlight">\(\Phi_{2}(r_{1},r_{2})=\text{1s}(r_{1})\text{2s}(r_{2})\)</span>, then <span class="math notranslate nohighlight">\(|\Psi(r_{1},r_{2})|^{2}\mathrm{d}r_{1}\mathrm{d}r_{2}\)</span> is the probability of finding two electrons simultaneously in volume elements <span class="math notranslate nohighlight">\(\mathrm{d}r_{1}\times \mathrm{d}r_{2}\)</span>.
+But if we switch the electrons, the corresponding probability will be <span class="math notranslate nohighlight">\(|\Psi(r_{2},r_{1})|^{2}\mathrm{d}r_{1}\mathrm{d}r_{2}\)</span>. Since electrons are physically indistinguishable, we should obtain same probability. However in this case
+$<span class="math notranslate nohighlight">\(|\Psi(r_{1},r_{2})|^{2} \ne |\Psi(r_{2},r_{1})|^{2}\)</span><span class="math notranslate nohighlight">\(
+That is, the product function **violates** the indistinguishable requirement. Furthermore, the requirement shows that \)</span>\Psi(r_{1},r_{2})<span class="math notranslate nohighlight">\( and \)</span>\Psi(r_{2},r_{1})<span class="math notranslate nohighlight">\( should differ at most by a phase \)</span>e^{\mathrm{i}\theta}<span class="math notranslate nohighlight">\(. [[From group theory we know]] that the only distinct possibilities need to be considered are \)</span>\pm 1<span class="math notranslate nohighlight">\(, which corresponding to symmetric and antisymmetric cases. 
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\Psi(r_{2},r_{1}) &amp;= \Psi(r_{1},r_{2}) \quad \text{(symmetric wavefunction)}\\
+\Psi(r_{2},r_{1}) &amp;= -\Psi(r_{1},r_{2}) \quad \text{(antisymmetric wavefunction)}
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+Generally, we have 
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\hat{P}\Psi(r_{1},r_{2},\cdots,r_{N}) &amp;= \Psi(r_{1},r_{2},\cdots,r_{N}) \quad \text{(symmetric wavefunction)}\\
+\hat{P}\Psi(r_{1},r_{2},\cdots,r_{N}) &amp;= (-1)^{\tau_{\hat{P}}}\Psi(r_{1},r_{2},\cdots,r_{N}) \quad \text{(antisymmetric wavefunction)}
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+where \)</span>\hat{P}<span class="math notranslate nohighlight">\( effects any permutation of \)</span>(r_{1},r_{2},\cdots,r_{N})<span class="math notranslate nohighlight">\(, and \)</span>\tau_{\hat{P}}<span class="math notranslate nohighlight">\( corresponding to the inverse number of permutation \)</span>\hat{P}<span class="math notranslate nohighlight">\(. Noted that the relation will be modified after introducing spin.
+Come back to the Helium example, \)</span>\Phi_{1}(r_{1},r_{2})<span class="math notranslate nohighlight">\( is acceptable as symmetric wavefunction, but neither \)</span>\Phi_{2}(r_{1},r_{2})<span class="math notranslate nohighlight">\( nor \)</span>\Phi_{2}(r_{2},r_{1})<span class="math notranslate nohighlight">\( is acceptable. They are **degenerate** with same energy \)</span>\epsilon_{\text{1s}}+\epsilon_{\text{2s}}<span class="math notranslate nohighlight">\( However, since SE is linear, the two latter wavefunctions can be combined with coefficients to yield another solution:
+\)</span><span class="math notranslate nohighlight">\(\Phi_{2}^{\prime} = c_{1}\Phi_{2}(r_{1},r_{2})+c_{2}\Phi_{2}(r_{2},r_{1})\)</span><span class="math notranslate nohighlight">\(
+Then we obtain following acceptable wavefunctions for Helium-like system: 
+(1) configuration \)</span>\text{1s}^{2}<span class="math notranslate nohighlight">\(, 
+\)</span><span class="math notranslate nohighlight">\(\Psi_{1}(r_{1},r_{2}) = \Phi_{1}(r_{1},r_{2})\)</span><span class="math notranslate nohighlight">\(
+(2) configuration \)</span>\text{1s 2s}<span class="math notranslate nohighlight">\(,
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\Psi_{2}(r_{1},r_{2}) &amp;= \frac{1}{\sqrt{2}}(\Phi_{2}(r_{1},r_{2})+\Phi_{2}(r_{2},r_{1}))\\
+\Psi_{3}(r_{1},r_{2}) &amp;= \frac{1}{\sqrt{2}}(\Phi_{2}(r_{1},r_{2})-\Phi_{2}(r_{2},r_{1}))
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+Noted that other orbital configurations such as \)</span>\text{1s 2p}_{0}$ can be constructed in the same way. Such states are frequently degenerate in IPM view owing to degeneracies of AOs themselves. When electron interaction is admitted, the energies of IPM states are modified, and the original degeneracies may be resolved, but the states are still classified in terms of electron configurations and <strong>IPM ideas still exist</strong> in the theory of atomic spectra. [Condon and Shortley, 1935](&lt;file:///C:/Users/Yi/Desktop/zbook Base&gt;)</p>
+</section>
+<section id="effect-of-single-electron-spin">
+<h3>Effect of single electron spin<a class="headerlink" href="#effect-of-single-electron-spin" title="Link to this heading">#</a></h3>
+<p>Single electron is not completely characterized by spatial wavefunction <span class="math notranslate nohighlight">\(\phi(r)\)</span>; even in a state without orbital angular momentum, application of magnetic field reveals that the state is really <strong>a degenerate pair or doublet</strong>. The small splitting of energy levels which is [[Zeeman effect]], suggests an <strong>intrinsic magnetic moment</strong> whose component along the <strong>field direction</strong> can take only one of two possible values <span class="math notranslate nohighlight">\(\alpha\)</span> or <span class="math notranslate nohighlight">\(\beta\)</span>. The splitting arises from small field-dependent terms in <span class="math notranslate nohighlight">\(H\)</span> which we have so far ignored.
+The intrinsic angular momentum is called <strong>spin</strong> and the permitted values of the spin component are found to be <span class="math notranslate nohighlight">\(\pm\hbar /2\)</span>. The direction along which the component is measured is chosen as <span class="math notranslate nohighlight">\(z\)</span> axis. Mathematically, we introduce a <strong>spin variable</strong> <span class="math notranslate nohighlight">\(s\)</span> in addition to the <strong>position variable</strong> <span class="math notranslate nohighlight">\(r\)</span>, and we associate operators <span class="math notranslate nohighlight">\(S_{x},S_{y}\)</span> and <span class="math notranslate nohighlight">\(S_{z}\)</span> with the three components of spin angular momentum. Now the <strong>spinless Hamiltonian</strong> works on <strong>external</strong> variable <span class="math notranslate nohighlight">\(r\)</span>, while the <strong>spin operators</strong> work on <strong>internal</strong> variable <span class="math notranslate nohighlight">\(s\)</span>. That is,
+![[Drawing 2024-12-11 15.39.50.excalidraw]]
+<em>I have to say that is an awesome way to explain <strong>spin</strong>.</em>
+Like the product function <span class="math notranslate nohighlight">\(\Phi(r_{1},r_{2})\)</span> is a simultaneous eigenfunction of two parts of the system, so is the spin-orbital <span class="math notranslate nohighlight">\(\Psi(\boldsymbol{x}) := \Psi(r,s) = \phi(r)\eta(s)\)</span>, where we adopt <span class="math notranslate nohighlight">\(\boldsymbol{x}\)</span> for space-spin variables, i.e. <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(s\)</span> together. If we interested in states with a definite value of <span class="math notranslate nohighlight">\(S_{z}\)</span>, then the spin state <span class="math notranslate nohighlight">\(\eta(s)\)</span> will be a solution of
+$<span class="math notranslate nohighlight">\(S_{z}\eta = \lambda \eta\)</span><span class="math notranslate nohighlight">\(
+and if the orbital state is of energy \)</span>\epsilon<span class="math notranslate nohighlight">\(, then \)</span>\phi(r)<span class="math notranslate nohighlight">\( satisfies 
+\)</span><span class="math notranslate nohighlight">\(h \phi = \epsilon \phi\)</span><span class="math notranslate nohighlight">\(
+Consequently, since each operator works only on its own variables,
+\)</span><span class="math notranslate nohighlight">\(\boxed{\begin{aligned}
+h \Psi &amp;= \epsilon \Psi\\
+S_{z}\Psi &amp;= \lambda \Psi
+\end{aligned}}\)</span>$</p>
+<p>^f09564
+and <span class="math notranslate nohighlight">\(\Psi\)</span> is a simultaneous eigenstate of <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(S_{z}\)</span>. Also, observation shows that Eq. [[1 Introduction#^f09564]] has only two solutions: these are normally written as <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> and satisfy
+$<span class="math notranslate nohighlight">\(S_{z}\alpha = \frac{1}{2}\alpha, S_{z}\beta = - \frac{1}{2}\beta\)</span><span class="math notranslate nohighlight">\(
+where we use dimensionless \)</span>S<span class="math notranslate nohighlight">\( to avoid repeated appearance of \)</span>\hbar<span class="math notranslate nohighlight">\(, which is the atomic unit. We also know that every orbital \)</span>\phi<span class="math notranslate nohighlight">\( yields two possible spin-orbitals, \)</span>\psi = \phi \alpha<span class="math notranslate nohighlight">\( and \)</span>\bar{\psi} = \phi \beta<span class="math notranslate nohighlight">\(. 
+The observed spin components behave like components of a vector and satisfy commutation relations exactly like the orbital angular momentum operators. [[Angular Momentum]]
+A spin-orbital \)</span>\Psi<span class="math notranslate nohighlight">\( may be an exact eigenfunction without neglect of spin effects because spatial and spin parts are separated in total Hamiltonian, and spin part is just \)</span>S_{z}<span class="math notranslate nohighlight">\( or some function of \)</span>S_{z}<span class="math notranslate nohighlight">\(. [[Nonlinear Function of S]] Also, to have a more visualized view of \)</span>\alpha(s)<span class="math notranslate nohighlight">\( and \)</span>\beta(s)<span class="math notranslate nohighlight">\(, we can take them as delta functions because they vanish for \)</span>s \ne \pm \frac{1}{2}<span class="math notranslate nohighlight">\(, respectively. [Dirac, 1958](&lt;file:///C:/Users/Yi/Desktop/zbook Base&gt;) And we have orthonormal relation:
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\int \alpha(s)^{*}\alpha(s)\mathrm{d}s &amp;=  \int \beta(s)^{*}\beta(s)\mathrm{d}s = 1\\
+\int \alpha(s)^{*}\beta(s)\mathrm{d}s &amp;=  \int \beta(s)^{*}\alpha(s)\mathrm{d}s = 0
+\end{aligned}\)</span>$</p>
+</section>
+<section id="classification-of-electron-states">
+<h3>Classification of electron states<a class="headerlink" href="#classification-of-electron-states" title="Link to this heading">#</a></h3>
+<p>We return to the Helium-like system including spin, then electrons must each be assigned to spin-orbitals as
+$<span class="math notranslate nohighlight">\(\text{1s}\alpha,\text{1s}\beta,\text{2s}\alpha,\text{2s}\beta,\cdots\)</span><span class="math notranslate nohighlight">\(
+For configuration \)</span>\text{1s}^{2}<span class="math notranslate nohighlight">\(, we have four product functions as
+\)</span><span class="math notranslate nohighlight">\(\Phi(\boldsymbol{x_{1}},\boldsymbol{x_{2}}) \in \{\text{1s}\alpha,\text{1s}\beta \}_{1} \times \{\text{1s}\alpha,\text{1s}\beta \}_{2}\)</span><span class="math notranslate nohighlight">\(
+i.e.
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\Phi_{1} := \Phi_{1}(\boldsymbol{x_{1}},\boldsymbol{x_{2}}) &amp;= \text{1s}(r_{1})\alpha(s_{1})\text{1s}(r_{2})\alpha(s_{2})\\
+\Phi_{2} :=\Phi_{2}(\boldsymbol{x_{1}},\boldsymbol{x_{2}}) &amp;= \text{1s}(r_{1})\alpha(s_{1})\text{1s}(r_{2})\beta(s_{2})\\
+\Phi_{3} :=\Phi_{3}(\boldsymbol{x_{1}},\boldsymbol{x_{2}}) &amp;= \text{1s}(r_{1})\beta(s_{1})\text{1s}(r_{2})\alpha(s_{2})\\
+\Phi_{4} :=\Phi_{4}(\boldsymbol{x_{1}},\boldsymbol{x_{2}}) &amp;= \text{1s}(r_{1})\beta(s_{1})\text{1s}(r_{2})\beta(s_{2})
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+and they are all degenerate. (We fix \)</span>\Phi_{1}<span class="math notranslate nohighlight">\( as \)</span>\Phi_{1}(\boldsymbol{x_{1}},\boldsymbol{x_{2}})<span class="math notranslate nohighlight">\() By combination we obtain another four symmetric or antisymmetric wavefunctions.
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\Psi_{1}^{a} &amp;= \frac{1}{\sqrt{2}}(\Phi_{2}-\Phi_{3})\\
+\Psi_{1}^{s} &amp;= \Phi_{1}\\
+\Psi_{2}^{s} &amp;= \frac{1}{\sqrt{2}}(\Phi_{2}+\Phi_{3})\\
+\Psi_{3}^{s} &amp;= \Phi_{4}
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+Similarly for \)</span>\text{1s}\text{2s}<span class="math notranslate nohighlight">\(, [[Configuration 1s2s Derivation]] we can get its spin-orbital wavefunctions. And their energies are shown below.
+![[Drawing 2024-12-11 18.11.24.excalidraw]]
+When applying a magnetic field, we can see the triplet states be resolved ([[not into three components]]), and can be identified spectroscopically. From experimental data, we verifies antisymmetric existence, which means electrons' wavefunctions satisfy antisymmetric relation, i.e. **antisymmetry principle**: 
+The wavefunction \)</span>\Psi(\boldsymbol{x_{1}},\boldsymbol{x_{2}},\cdots,\boldsymbol{x_{N}})<span class="math notranslate nohighlight">\( describing any state of an N-electron system is antisymmetric under any permutation of electrons.
+\)</span><span class="math notranslate nohighlight">\(\hat{P} \Psi(\boldsymbol{x_{1}},\boldsymbol{x_{2}},\cdots,\boldsymbol{x_{N}}) = (-1)^{\tau_{\hat{P}}}\Psi(\boldsymbol{x_{1}},\boldsymbol{x_{2}},\cdots,\boldsymbol{x_{N}})\)</span><span class="math notranslate nohighlight">\(
+This is a generalization of **Pauli exclusion principle**. The connection is made in the case of \)</span>N=2<span class="math notranslate nohighlight">\(. If two electrons are put into same spin-orbital, the wavefunction can only be symmetric, in violation of the antisymmetry requirement. Therefore, two electrons (**in IPM description**) cannot occupy the same state, that is, in Pauli's statement, possess identical sets of quantum numbers. 
+Noted that for more than two electrons, it's not possible to find a **spatial-spin product form** of \)</span>\Psi$ satisfies antisymmetry principle. [[When can we separate spatial and spin part of wavefunction]]</p>
+</section>
+</section>
+<section id="example-hydrogen-molecule">
+<h2>Example: Hydrogen Molecule<a class="headerlink" href="#example-hydrogen-molecule" title="Link to this heading">#</a></h2>
+<p>It seems like our [[1 Introduction#^533af6]] approach can be generalized to any many-electron system: (1) model Hamiltonian <span class="math notranslate nohighlight">\(H_{0}\)</span> describe <span class="math notranslate nohighlight">\(N\)</span> non-interacting electrons moving in the field of all fixed nuclei; (2) product functions are simultaneous eigenstate; (3) and when symmetry considerations are satisfied, we may get a fair description including interaction.
+However, in passing from atoms to molecules, we don’t have one-electron eigenfunctions in closed form because <span class="math notranslate nohighlight">\(h\)</span> includes <strong>several nuclei</strong> instead of just one.
+We shall need <strong>polycentric molecular orbitals (MOs)</strong> that describe the states of a single electron moving over the whole nuclear framework.  ^f14b69</p>
+<section id="hydrogen-molecule-ion-mathrm-h-2">
+<h3>Hydrogen molecule ion <span class="math notranslate nohighlight">\(\mathrm{H_{2}^{+}}\)</span><a class="headerlink" href="#hydrogen-molecule-ion-mathrm-h-2" title="Link to this heading">#</a></h3>
+<p>The simplest 1-electron 2-center system is <span class="math notranslate nohighlight">\(\mathrm{H_{2}^{+}}\)</span>, in which we illustrate the nature of the polycentric problem. The SE is
+$<span class="math notranslate nohighlight">\(h \phi = \epsilon \phi\)</span><span class="math notranslate nohighlight">\(
+where
+\)</span><span class="math notranslate nohighlight">\(h = - \frac{1}{2}\nabla^{2}- \left( \frac{1}{r_{a}}+\frac{1}{r_{b}} \right)\)</span><span class="math notranslate nohighlight">\(
+The SE can be solved with variable separation by [Burrau, 1927](&lt;file:///C:/Users/Yi/Desktop/zbook Base&gt;). However, solutions in this way is not generally possible, so we directly pass to simpler approximation. 
+If the electron is near any nucleus, the Hamiltonian will approximately a single hydrogen atom. Then we use \)</span>a(r)<span class="math notranslate nohighlight">\( for the \)</span>\text{1s}<span class="math notranslate nohighlight">\( orbital centered on nucleus a and \)</span>b(r)<span class="math notranslate nohighlight">\( for that centered at nucleus b. Since 1s functions fall rather rapidly from their peak value at the nuclei, we write the trial function (MO) as 
+\)</span><span class="math notranslate nohighlight">\(\phi(r) = c_{a}a(r)+c_{b}b(r)\)</span><span class="math notranslate nohighlight">\(
+And 
+\)</span><span class="math notranslate nohighlight">\(|\phi(r)|^{2}\mathrm{d}r = [c_{a}^{2}a(r)^{2}+c_{b}^{2}b(r)^{2}+2c_{a}c_{b}a(r)b(r)]\times \mathrm{d}r\)</span><span class="math notranslate nohighlight">\(
+corresponding to the probability of finding electron at \)</span>r<span class="math notranslate nohighlight">\(. Due to the mirror symmetry, we have 
+\)</span><span class="math notranslate nohighlight">\(|\phi(r)|^{2} = |\phi(-r)|^{2}\)</span><span class="math notranslate nohighlight">\(
+That is 
+\)</span><span class="math notranslate nohighlight">\(c_{a}^{2}a(r)^{2}+c_{b}^{2}b(r)^{2}+\cancel{2c_{a}c_{b}a(r)b(r)} = c_{a}^{2}b(r)^{2}+c_{b}^{2}a(r)^{2}+\cancel{2c_{a}c_{b}a(r)b(r)}\)</span><span class="math notranslate nohighlight">\(
+So we have \)</span>c_{a}=\pm c_{b}<span class="math notranslate nohighlight">\(. Therefore we have two approximate MOs,
+\)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+B(r) &amp;= m_{B}[a(r)+b(r)]\\
+A(r) &amp;= m_{A}[a(r)-b(r)]
+\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+where \)</span>B<span class="math notranslate nohighlight">\( refers to bonding (ground state) and \)</span>A<span class="math notranslate nohighlight">\( refers to antibonding (first excited state), and \)</span>m_{i}$ are normalization constant.
+MOs in <strong>linear combination of atomic orbitals (LCAO) form</strong>, is extremely important in molecular quantum mechanics. [[How to identify ground state and excited state in LCAO]] Actually, LCAO is a method to deal with the polycentric problem in [[1 Introduction#^f14b69]], that’s how we obtain molecule-level “AOs” for one electron without interaction.</p>
+</section>
+<section id="normal-molecule-mathrm-h-2">
+<h3>Normal molecule <span class="math notranslate nohighlight">\(\mathrm{H_{2}}\)</span><a class="headerlink" href="#normal-molecule-mathrm-h-2" title="Link to this heading">#</a></h3>
+<p>Use the LCAO from <span class="math notranslate nohighlight">\(\mathrm{H_{2}^{+}}\)</span>, we consider solve for the real molecule <span class="math notranslate nohighlight">\(\mathrm{H_{2}}\)</span>. Like Helium atom[[1 Introduction#^533af6]], we first absent electron interaction, and an approximate spatial wavefunction for the state of lowest energy will be
+$<span class="math notranslate nohighlight">\(\Phi(r_{1},r_{2}) = B(r_{1})B(r_{2})\)</span><span class="math notranslate nohighlight">\(
+just like 1s orbital for Hydrogen atom. (1s-like MOs) And the spatial wavefunction gives an energy expectation \)</span>E = 2\epsilon_{B}<span class="math notranslate nohighlight">\(. Combined with a antisymmetric spin part, we get the antisymmetric spin-orbital wavefunction: 
+\)</span><span class="math notranslate nohighlight">\(\Psi(\boldsymbol{x_{1}},\boldsymbol{x_{2}}) = B(r_{1})B(r_{2})\times \frac{1}{\sqrt{2}}[\alpha(s_{1})\beta(s_{2})-\beta(s_{1})\alpha(s_{2})]\)</span>$</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="markdown.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown Files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-helium-atom">Example: Helium Atom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-approximation">First approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry-of-wavefunction">Symmetry of wavefunction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-single-electron-spin">Effect of single electron spin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-electron-states">Classification of electron states</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hydrogen-molecule">Example: Hydrogen Molecule</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-molecule-ion-mathrm-h-2">Hydrogen molecule ion <span class="math notranslate nohighlight">\(\mathrm{H_{2}^{+}}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-molecule-mathrm-h-2">Normal molecule <span class="math notranslate nohighlight">\(\mathrm{H_{2}}\)</span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By dengyi@stu.pku.edu.cn
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
